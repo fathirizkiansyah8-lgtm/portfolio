@@ -608,7 +608,8 @@ function initNavbar() {
    ========================================================= */
 function initIntro(onDone) {
   const intro = $("#intro");
-  if (!intro || store.get("introSeen", true)) {
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+  if (!intro || isMobile || store.get("introSeen", true)) {
     if (intro) intro.hidden = true; // pastikan tersembunyi saat refresh di sesi yang sama
     onDone();
     return;

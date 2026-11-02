@@ -1406,6 +1406,7 @@ main,
 /* ---------- 9. Contact ---------- */
 .contact__grid {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.5rem;
   align-items: start;
 }
@@ -1792,6 +1793,7 @@ textarea.input {
 
 .detail-grid {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2.5rem;
   margin-top: 2.5rem;
   align-items: start;
@@ -1995,6 +1997,13 @@ textarea.input {
 }
 
 /* ---------- 14. Responsive ---------- */
+@media (max-width: 767px) {
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: none !important;
+  }
+}
+
 @media (min-width: 480px) {
   .cert-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2084,10 +2093,10 @@ textarea.input {
     grid-template-columns: repeat(6, 1fr);
   }
   .contact__grid {
-    grid-template-columns: 1fr 1.55fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr);
   }
   .detail-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 3.5rem;
   }
   .detail-media {
