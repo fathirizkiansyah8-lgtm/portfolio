@@ -609,7 +609,7 @@ function initNavbar() {
 function initIntro(onDone) {
   const intro = $("#intro");
   const isMobile = window.matchMedia("(max-width: 767px)").matches;
-  if (!intro || store.get("introSeen", true)) {
+  if (!intro || (!isMobile && store.get("introSeen", true))) {
     if (intro) intro.hidden = true; // pastikan tersembunyi saat refresh di sesi yang sama
     onDone();
     return;
@@ -632,7 +632,7 @@ function initIntro(onDone) {
   };
 
   // Pasang timer penutup PALING AWAL, supaya intro tetap tertutup walau ada error setelahnya
-  setTimeout(close, reducedMotion ? 1200 : isMobile ? 1800 : 3300);
+  setTimeout(close, reducedMotion ? 1200 : isMobile ? 5000 : 3300);
 
   intro.hidden = false;
   intro.removeAttribute("aria-hidden");
