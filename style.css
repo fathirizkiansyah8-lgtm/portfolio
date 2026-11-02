@@ -1998,6 +1998,24 @@ textarea.input {
 
 /* ---------- 14. Responsive ---------- */
 @media (max-width: 767px) {
+  .intro {
+    display: block;
+    overflow-y: auto;
+    padding: 1rem 1rem 4.5rem;
+  }
+  .intro__card {
+    max-height: calc(100dvh - 6rem);
+    overflow-y: auto;
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+  .intro__title {
+    font-size: clamp(1.65rem, 7vw, 2rem);
+  }
+  .intro__visual {
+    padding: 0.9rem;
+  }
+
   [data-aos="fade-left"],
   [data-aos="fade-right"] {
     transform: none !important;
