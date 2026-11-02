@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="id" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fathi Rizkiansyah | Web Developer</title>
+
+    <!-- SEO dasar -->
+    <meta
+      name="description"
+      content="Portfolio Fathi Rizkiansyah, siswa kelas XII RPL di SMKN 20 Jakarta. Lihat project web, pengalaman magang, sertifikat, dan tech stack."
+    />
+    <meta name="author" content="Fathi Rizkiansyah" />
+    <meta name="theme-color" content="#050a14" />
+    <link rel="canonical" href="https://www.fathirizkiansyah.my.id/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="Website" />
+    <meta
+      property="og:title"
+      content="Fathi Rizkiansyah | Web Developer"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio project, sertifikat, dan tech stack Fathi Rizkiansyah."
+    />
+    <meta property="og:url" content="https://www.fathirizkiansyah.my.id/" />
+    <meta property="og:image" content="assets/images/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+
+    <!-- Font & ikon tech stack -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    "
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body data-page="home">
+    <a class="skip-link" href="#main" data-i18n="a11y.skip"
+      >Lewati ke konten utama</a
+    >
+
+    <!-- Background partikel -->
+    <div id="particles-js" aria-hidden="true"></div>
+
+    <!-- ============ INTRO / WELCOME SCREEN ============ -->
+    <div class="intro" id="intro" aria-hidden="'true" hidden>
+      <div class="intro__card">
+        <span class="intro__watermark" aria-hidden="true">WELCOME</span>
+        <div class="intro__left">
+          <div class="chip-row">
+            <span class="chip chip--dot">System ready</span>
+            <span clsss="chip">Portfolio 2026</span>
+            <span class="chip">UI loading</span>
+          </div>
+          <h2 class="intro__title" data-il8n="intro.title">
+            Selamat Datang di Website Portfolio Fathi
+          </h2>
+          <p class="intro__desc" data-il8n="intro.desc">
+            Membangun pengalaman digital yang modern, handal, dan cepat.
+          </p>
+          <div class="intro__status">
+            <span>Live status</span>
+            <div class="intro__bar"><span></span></div>
+          </div>
+          <div class="intro__pills">
+            <span class="pill"
+              ><svg class="icon"><use href="#i-code"></use></svg>>Code</span
+            >
+            <span class="pill"
+              ><svg class="icon"><use href="#i-user"></use></svg>>Profile</span
+            >
+            <span class="pill"
+              ><svg class="icon"><use href="#i-github"></use></svg>>Source</span
+            >
+          </div>
+          <span class="intro__url"
+            ><svg class="icon"><use href="#i-globe"></use></svg
+            ><span class="js-website">www.fathirizkiansyah.my.id</span></span
+          >
+        </div>
+        <div class="intro__visual">
+          <div class="intro__visual-head">
+            <span>Core UI</span><strong>Online</strong>
+          </div>
+          <div class="orbit">
+            <div class="orbit__ring">
+              <span class="orbit__node" style="--a: 0deg"
+                ><svg class="icon"><use href="#i-globe"></use></svg
+              ></span>
+              <span class="orbit__node" style="--a: 90deg"
+                ><svg class="icon"><use href="#i-layers"></use></svg
+              ></span>
+              <span class="orbit__node" style="--a: 180deg"
+                ><svg class="icon"><use href="#i-code"></use></svg
+              ></span>
+              <span class="orbit__node" style="--a: 270deg"
+                ><svg class="icon"><use href="#i-cloud"></use></svg
+              ></span>
+            </div>
+            <div class="orbit__core"><span>WELCOME</span></div>
+          </div>
+          <div class="intro__stats">
+            <div>
+              <small>Modules</small><strong>06</strong><span>Loaded</span>
+            </div>
+            <div>
+              <small>Letency</small><strong>12ms</strong><span>Stable</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="intro__skip"
+        id="introSkip"
+        type="button"
+        data-il8n="intro.skip"
+      >
+        Lewati
+      </button>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar" id="navbar">
+      <nav class="navbar__inner container" aria-label="Navigasi utama">
+        <a href="#home" class="navbar__brand">Fathi Rizkiansyah</a>
+        <ul class="navbar__menu" id="navMenu">
+          <li>
+            <a
+              href="#home"
+              class="navbar__link"
+              data-section="home"
+              data-i18n="nav.home"
+              >Beranda</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="navbar__link"
+              data-section="about"
+              data-i18n="nav.about"
+              >Tentang</a
+            >
+          </li>
+          <li>
+            <a
+              href="#portfolio"
+              class="navbar__link"
+              data-section="portfolio"
+              data-i18n="nav.portfolio"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="navbar__link"
+              data-section="contact"
+              data-i18n="nav.contact"
+              >Kontak</a
+            >
+          </li>
+        </ul>
+        <div class="navbar__actions">
+          <button
+            class="lang-toggle"
+            id="langToggle"
+            type="button"
+            data-i18n-aria="a11y.lang"
+            aria-label="Ganti bahasa"
+          >
+            <span data-lang="id">ID</span><span data-lang="en">EN</span>
+          </button>
+          <button
+            class="navbar__burger"
+            id="navBurger"
+            type="button"
+            aria-label="Buka menu"
+            aria-expanded="false"
+            aria-controls="navMenu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="home">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1 class="hero__title" data-aos="fade-up">
+            <span>Software Engineering</span>
+            <span class="text-gradient">Student</span>
+          </h1>
+          <p class="hero__typing" data-aos="fade-up" data-aos-delay="100">
+            <span id="typingText">Web Developer</span><span class="hero__caret" aria-hidden="true"></span>
+          </p>
+          <p class="hero__desc" data-aos="fade-up" data-aos-delay="200" data-i18n="hero.desc"></p>
+          <ul class="hero__badges" data-aos="fade-up" data-aos-delay="300" aria-label="Skill utama">
+            <li class="badge">HTML</li>
+            <li class="badge">CSS</li>
+            <li class="badge">JavaScript</li>
+            <li class="badge">Laravel</li>
+          </ul>
+          <div class="hero__actions" data-aos="fade-up" data-aos-delay="400">
+            <a href="#portfolio" class="btn btn--dark"><span data-i18n="hero.projects">Projects</span><svg class="icon">
+                <use href="#i-external"></use>
+              </svg></a>
+            <a href="#contact" class="btn btn--dark"><span data-i18n="hero.contact">Kontak</span><svg class="icon">
+                <use href="#i-mail"></use>
+              </svg></a>
+          </div>
+        </div>
+
+        <!-- Panel dekoratif "System Online" -->
+        <div class="hero__visual" data-aos="fade-left" data-aos-delay="250" aria-hidden="true">
+          <div class="sys-panel">
+            <div class="sys-panel__head"><span><i class="dot-live"></i>System online</span><span>IT core</span></div>
+            <span class="float-chip float-chip--cli"><svg class="icon">
+                <use href="#i-terminal"></use>
+              </svg>CLI Shell</span>
+            <span class="float-chip float-chip--cloud"><svg class="icon">
+                <use href="#i-cloud"></use>
+              </svg>Cloud Sync</span>
+            <div class="console">
+              <div class="console__bar"><i></i><i></i><i></i><span>Console</span></div>
+              <div class="console__body">
+                <div class="console__lines">
+                  <p><svg class="icon">
+                      <use href="#i-code"></use>
+                    </svg>build /app</p>
+                  <span class="line" style="--w:78%"></span>
+                  <span class="line" style="--w:62%"></span>
+                  <span class="line" style="--w:70%"></span>
+                  <span class="line" style="--w:48%"></span>
+                  <span class="line" style="--w:58%"></span>
+                </div>
+                <div class="console__runtime">
+                  <p><svg class="icon">
+                      <use href="#i-cpu"></use>
+                    </svg>Runtime</p>
+                  <span class="meter" style="--w:86%"></span>
+                  <span class="meter" style="--w:64%"></span>
+                  <span class="meter" style="--w:74%"></span>
+                </div>
+              </div>
+              <div class="console__foot"><span>build ok</span><span>latency 12ms</span></div>
+            </div>
+            <span class="float-chip float-chip--secure"><svg class="icon">
+                <use href="#i-shield"></use>
+              </svg>Secure</span>
+            <div class="server-node">
+              <span class="float-chip float-chip--server"><svg class="icon">
+                  <use href="#i-server"></use>
+                </svg>Server Node</span>
+              <span class="line" style="--w:92%"></span>
+              <span class="line" style="--w:70%"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="section about" id="about">
+        <div class="container">
+          <header class="section-head" data-aos="fade-up">
+            <h2 class="section-title text-gradient" data-i18n="about.title">
+              Tentang Saya
+            </h2>
+            <p class="section-sub">
+              <svg class="icon">
+                <use href="#i-sparkles"></use></svg
+              ><span data-i18n="about.subtitle"></span
+              ><svg class="icon">
+                <use href="#i-sparkles"></use>
+              </svg>
+            </p>
+          </header>
+
+          <div class="about__grid">
+            <div class="about__content" data-aos="fade-right">
+              <p class="about__hello text-gradient" data-i18n="about.hello">
+                Halo, saya
+              </p>
+              <h3 class="about__name">Fathi Rizkiansyah</h3>
+              <p class="about__desc" data-i18n="about.desc"></p>
+              <blockquote
+                class="about__quote"
+                data-i18n="about.quote"
+              ></blockquote>
+              <div class="about__actions">
+                <a
+                  class="btn btn--primary js-cv"
+                  href="assets/cv/cv-Fathi.pdf"
+                  download
+                >
+                  <svg class="icon">
+                    <use href="#i-download"></use></svg
+                  ><span data-i18n="about.cv">Unduh CV</span>
+                </a>
+                <a class="btn btn--outline" href="#portfolio">
+                  <svg class="icon">
+                    <use href="#i-code"></use></svg
+                  ><span data-i18n="about.viewProjects">Lihat Project</span>
+                </a>
+              </div>
+            </div>
+            <div class="about__photo" data-aos="zoom-in" data-aos-delay="150">
+              <div class="photo-ring">
+                <img
+                  src="assets/images/profile.jpeg"
+                  alt="Foto Fathi Rizkiansyah"
+                  width="400"
+                  height="400"
+                  loading="lazy"
+                  data-i18n-alt="about.photoAlt"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Kartu statistik: angka diisi otomatis dari data di script.js -->
+          <div class="stats">
+            <article class="stat-card" data-aos="fade-up">
+              <span class="stat-card__icon"
+                ><svg class="icon">
+                  <use href="#i-code"></use></svg
+              ></span>
+              <div class="stat-card__text">
+                <h4 data-i18n="stats.projects">Total project</h4>
+                <p data-i18n="stats.projectsDesc"></p>
+              </div>
+              <div class="stat-card__num">
+                <strong data-count="projects">0</strong
+                ><span class="live">live</span>
+              </div>
+              <span class="stat-card__line"></span>
+              <svg class="icon stat-card__arrow">
+                <use href="#i-arrow-up-right"></use>
+              </svg>
+            </article>
+            <article class="stat-card" data-aos="fade-up" data-aos-delay="100">
+              <span class="stat-card__icon"
+                ><svg class="icon">
+                  <use href="#i-award"></use></svg
+              ></span>
+              <div class="stat-card__text">
+                <h4 data-i18n="stats.certs">Sertifikat</h4>
+                <p data-i18n="stats.certsDesc"></p>
+              </div>
+              <div class="stat-card__num">
+                <strong data-count="certs">0</strong
+                ><span class="live">live</span>
+              </div>
+              <span class="stat-card__line"></span>
+              <svg class="icon stat-card__arrow">
+                <use href="#i-arrow-up-right"></use>
+              </svg>
+            </article>
+            <article class="stat-card" data-aos="fade-up" data-aos-delay="200">
+              <span class="stat-card__icon"
+                ><svg class="icon">
+                  <use href="#i-globe"></use></svg
+              ></span>
+              <div class="stat-card__text">
+                <h4 data-i18n="stats.exp">Tahun pengalaman</h4>
+                <p data-i18n="stats.expDesc"></p>
+              </div>
+              <div class="stat-card__num">
+                <strong data-count="months">0</strong
+                ><span class="live">live</span>
+              </div>
+              <span class="stat-card__line"></span>
+              <svg class="icon stat-card__arrow">
+                <use href="#i-arrow-up-right"></use>
+              </svg>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PORTFOLIO SHOWCASE ============ -->
+      <section class="section portfolio" id="portfolio">
+        <div class="container">
+          <header class="section-head" data-aos="fade-up">
+            <h2 class="section-title text-gradient" data-i18n="portfolio.title">
+              Portfolio Showcase
+            </h2>
+            <p class="section-desc" data-i18n="portfolio.desc"></p>
+          </header>
+
+          <div
+            class="tabs"
+            data-aos="fade-up"
+            role="tablist"
+            aria-label="Kategori portfolio"
+          >
+            <button
+              class="tab is-active"
+              role="tab"
+              id="tab-projects"
+              aria-selected="true"
+              aria-controls="panel-projects"
+              data-tab="projects"
+              type="button"
+            >
+              <svg class="icon">
+                <use href="#i-code"></use></svg
+              ><span data-i18n="tabs.projects">Projects</span>
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="tab-certs"
+              aria-selected="false"
+              aria-controls="panel-certs"
+              data-tab="certs"
+              tabindex="-1"
+              type="button"
+            >
+              <svg class="icon">
+                <use href="#i-award"></use></svg
+              ><span data-i18n="tabs.certs">Sertifikat</span>
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="tab-tech"
+              aria-selected="false"
+              aria-controls="panel-tech"
+              data-tab="tech"
+              tabindex="-1"
+              type="button"
+            >
+              <svg class="icon">
+                <use href="#i-layers"></use></svg
+              ><span data-i18n="tabs.tech">Tech Stack</span>
+            </button>
+          </div>
+
+          <div
+            class="tab-panel"
+            id="panel-projects"
+            role="tabpanel"
+            aria-labelledby="tab-projects"
+          >
+            <div class="filter" role="group" aria-label="Filter project">
+              <button
+                class="filter__btn is-active"
+                data-filter="project"
+                aria-pressed="true"
+                type="button"
+                data-i18n="filter.project"
+              >
+                Project
+              </button>
+              <button
+                class="filter__btn"
+                data-filter="design"
+                aria-pressed="false"
+                type="button"
+                data-i18n="filter.design"
+              >
+                Desain
+              </button>
+              <button
+                class="filter__btn"
+                data-filter="editing"
+                aria-pressed="false"
+                type="button"
+                data-i18n="filter.editing"
+              >
+                Editing
+              </button>
+            </div>
+            <div class="project-grid" id="projectGrid"></div>
+          </div>
+
+          <div
+            class="tab-panel"
+            id="panel-certs"
+            role="tabpanel"
+            aria-labelledby="tab-certs"
+            hidden
+          >
+            <div class="cert-grid" id="certGrid"></div>
+          </div>
+
+          <div
+            class="tab-panel"
+            id="panel-tech"
+            role="tabpanel"
+            aria-labelledby="tab-tech"
+            hidden
+          >
+            <div class="tech-grid" id="techGrid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="section contact" id="contact">
+        <div class="container">
+          <header class="section-head" data-aos="fade-up">
+            <h2 class="section-title text-gradient" data-i18n="contact.title">
+              Hubungi Saya
+            </h2>
+            <p class="section-desc" data-i18n="contact.subtitle"></p>
+          </header>
+
+          <div class="contact__grid">
+            <!-- Form kontak (tampilan + validasi client) -->
+            <div class="panel" data-aos="fade-right">
+              <h3 class="panel__title" data-i18n="contact.leftTitle">
+                Mari terhubung
+              </h3>
+              <p class="panel__desc" data-i18n="contact.leftDesc"></p>
+              <form class="form" id="contactForm" novalidate>
+                <div class="field field--icon">
+                  <label class="sr-only" for="cName" data-i18n="contact.name"
+                    >Nama</label
+                  >
+                  <svg class="icon field__icon">
+                    <use href="#i-user"></use>
+                  </svg>
+                  <input
+                    class="input"
+                    id="cName"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    data-i18n-placeholder="contact.namePh"
+                    required
+                  />
+                  <p class="field__error" aria-live="polite"></p>
+                </div>
+                <div class="field field--icon">
+                  <label class="sr-only" for="cEmail" data-i18n="contact.email"
+                    >Email</label
+                  >
+                  <svg class="icon field__icon">
+                    <use href="#i-mail"></use>
+                  </svg>
+                  <input
+                    class="input"
+                    id="cEmail"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    data-i18n-placeholder="contact.emailPh"
+                    required
+                  />
+                  <p class="field__error" aria-live="polite"></p>
+                </div>
+                <div class="field field--icon">
+                  <label class="sr-only" for="cMsg" data-i18n="contact.message"
+                    >Pesan</label
+                  >
+                  <svg class="icon field__icon field__icon--top">
+                    <use href="#i-message"></use>
+                  </svg>
+                  <textarea
+                    class="input"
+                    id="cMsg"
+                    name="message"
+                    rows="5"
+                    data-i18n-placeholder="contact.messagePh"
+                    required
+                  ></textarea>
+                  <p class="field__error" aria-live="polite"></p>
+                </div>
+                <button class="btn btn--primary btn--block" type="submit">
+                  <svg class="icon">
+                    <use href="#i-send"></use></svg
+                  ><span data-i18n="contact.send">Kirim pesan</span>
+                </button>
+              </form>
+              <hr class="divider" />
+              <div class="social">
+                <p class="social__label" data-i18n="contact.social">
+                  Temukan saya di
+                </p>
+                <div class="social__list" id="socialList"></div>
+              </div>
+            </div>
+
+            <!-- Form komentar / buku tamu (tampilan saja, tidak tersimpan) -->
+            <div
+              class="panel panel--wide"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
+              <h3 class="panel__title">
+                <svg class="icon">
+                  <use href="#i-message"></use></svg
+                ><span data-i18n="comments.title">Komentar</span>
+              </h3>
+              <form class="form" id="commentForm" novalidate>
+                <div class="field">
+                  <label class="field__label" for="cmName"
+                    ><span data-i18n="comments.name">Nama</span>
+                    <span class="req">*</span></label
+                  >
+                  <input
+                    class="input"
+                    id="cmName"
+                    name="name"
+                    type="text"
+                    data-i18n-placeholder="comments.namePh"
+                    required
+                  />
+                  <p class="field__error" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="cmMsg"
+                    ><span data-i18n="comments.message">Pesan</span>
+                    <span class="req">*</span></label
+                  >
+                  <textarea
+                    class="input"
+                    id="cmMsg"
+                    name="message"
+                    rows="4"
+                    data-i18n-placeholder="comments.messagePh"
+                    required
+                  ></textarea>
+                  <p class="field__error" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <span class="field__label"
+                    ><span data-i18n="comments.photo">Foto profil</span>
+                    <span class="opt" data-i18n="comments.optional"
+                      >(opsional)</span
+                    ></span
+                  >
+                  <div class="upload">
+                    <input
+                      class="sr-only"
+                      id="cmPhoto"
+                      name="photo"
+                      type="file"
+                      accept="image/*"
+                    />
+                    <label class="upload__btn" for="cmPhoto"
+                      ><svg class="icon">
+                        <use href="#i-image"></use></svg
+                      ><span data-i18n="comments.choose"
+                        >Pilih foto profil</span
+                      ></label
+                    >
+                    <p
+                      class="upload__hint"
+                      id="cmFileName"
+                      data-i18n="comments.max"
+                    >
+                      Ukuran maksimal 5MB
+                    </p>
+                  </div>
+                  <p class="field__error" aria-live="polite"></p>
+                </div>
+                <button class="btn btn--primary btn--block" type="submit">
+                  <svg class="icon">
+                    <use href="#i-send"></use></svg
+                  ><span data-i18n="comments.post">Kirim komentar</span>
+                </button>
+              </form>
+              <ul class="comment-list" id="commentList" aria-live="polite"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>
+          &copy; <span class="js-year">2026</span> Fathi Rizkiansyah.
+          <span data-i18n="footer.rights">Hak cipta dilindungi.</span>
+        </p>
+        <a href="#home" class="footer__top" data-i18n="footer.top"
+          >Kembali ke atas</a
+        >
+      </div>
+    </footer>
+
+    <!-- ============ MODAL SERTIFIKAT ============ -->
+    <div
+      class="modal"
+      id="certModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="certModalCap"
+      hidden
+    >
+      <div class="modal__backdrop" data-close></div>
+      <figure class="modal__content">
+        <button
+          class="modal__close"
+          type="button"
+          data-close
+          data-i18n-aria="a11y.close"
+          aria-label="Tutup"
+        >
+          <svg class="icon">
+            <use href="#i-x"></use>
+          </svg>
+        </button>
+        <img id="certModalImg" src="" alt="" />
+        <figcaption id="certModalCap"></figcaption>
+      </figure>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- Library animasi: particles.js (background) & AOS (animasi scroll) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

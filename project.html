@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detail Project | Fathi Rizkiansyah</title>
+  <meta name="description" content="Detail project dari portfolio Fathi Rizkiansyah.">
+  <meta name="author" content="Fathi Rizkiansyah">
+  <meta name="theme-color" content="#050a14">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Detail Project | Fathi Rizkiansyah">
+  <meta property="og:description" content="Detail project dari portfolio Fathi Rizkiansyah.">
+  <meta property="og:image" content="assets/images/og-image.svg">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="project">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Lewati ke konten utama</a>
+
+  <!-- Background partikel -->
+  <div id="particles-js" aria-hidden="true"></div>
+
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner container" aria-label="Navigasi utama">
+      <a href="index.html#home" class="navbar__brand">Fathi Rizkiansyah</a>
+      <ul class="navbar__menu" id="navMenu">
+        <li><a href="index.html#home" class="navbar__link" data-i18n="nav.home">Beranda</a></li>
+        <li><a href="index.html#about" class="navbar__link" data-i18n="nav.about">Tentang</a></li>
+        <li><a href="index.html#portfolio" class="navbar__link is-active" data-i18n="nav.portfolio">Portofolio</a></li>
+        <li><a href="index.html#contact" class="navbar__link" data-i18n="nav.contact">Kontak</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <button class="lang-toggle" id="langToggle" type="button" data-i18n-aria="a11y.lang" aria-label="Ganti bahasa">
+          <span data-lang="id">ID</span><span data-lang="en">EN</span>
+        </button>
+        <button class="navbar__burger" id="navBurger" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="project-page">
+    <!-- Konten diisi script.js berdasarkan ?id= di URL -->
+    <div class="container" id="projectDetail"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span class="js-year">2026</span> Fathi Rizkiansyah. <span data-i18n="footer.rights">Hak cipta dilindungi.</span></p>
+      <a href="index.html#portfolio" class="footer__top" data-i18n="project.back">Kembali</a>
+    </div>
+  </footer>
+
+  <!-- Library animasi: particles.js (background) & AOS (animasi scroll) -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
