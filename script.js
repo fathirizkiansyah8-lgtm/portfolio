@@ -43,7 +43,7 @@ const PROJECTS = [
     category: "project",
     image: "assets/images/projects/poin-sekolah.jpeg",
     tech: ["Laravel", "PHP", "MySQL", "Bootstrap"],
-    demo: "",
+    demo: "https://poin-sekolah-production.up.railway.app/",
     github: "https://github.com/fathirizkiansyah8-lgtm/poin-sekolah",
     title: {
       id: "Aplikasi Sistem Poin Sekolah",
@@ -71,7 +71,7 @@ const PROJECTS = [
     category: "project",
     image: "assets/images/projects/poin-sekolah.jpeg",
     tech: ["Laravel", "PHP", "MySQL", "Bootstrap"],
-    demo: "",
+    demo: "https://poin-sekolah-production.up.railway.app/",
     github: "https://github.com/fathirizkiansyah8-lgtm/poin-sekolah",
     title: {
       id: "Aplikasi Sistem Poin Sekolah",
@@ -99,7 +99,7 @@ const PROJECTS = [
     category: "project",
     image: "assets/images/projects/poin-sekolah.jpeg",
     tech: ["Laravel", "PHP", "MySQL", "Bootstrap"],
-    demo: "",
+    demo: "https://poin-sekolah-production.up.railway.app/",
     github: "https://github.com/fathirizkiansyah8-lgtm/poin-sekolah",
     title: {
       id: "Aplikasi Sistem Poin Sekolah",
