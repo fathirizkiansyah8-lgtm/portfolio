@@ -66,89 +66,9 @@ const PROJECTS = [
       ],
     },
   },
-  {
-    id: "poin-sekolah",
-    category: "project",
-    image: "assets/images/projects/poin-sekolah.jpeg",
-    tech: ["Laravel", "PHP", "MySQL", "Bootstrap"],
-    demo: "https://poin-sekolah-production.up.railway.app/",
-    github: "https://github.com/fathirizkiansyah8-lgtm/poin-sekolah",
-    title: {
-      id: "Aplikasi Sistem Poin Sekolah",
-      en: "School Points System App",
-    },
-    desc: {
-      id: "Sistem poin sekolah yang mencatat poin siswa secara otomatis.",
-      en: "A school points system that records student points through a website.",
-    },
-    features: {
-      id: [
-        "Pencatatan poin otomatis berbasis Website",
-        "Dashboard rekap poin",
-        "Ekspor laporan poin",
-      ],
-      en: [
-        "Automatic point recording via website",
-        "Points summary dashboard",
-        "Points report export",
-      ],
-    },
-  },
-  {
-    id: "poin-sekolah",
-    category: "project",
-    image: "assets/images/projects/poin-sekolah.jpeg",
-    tech: ["Laravel", "PHP", "MySQL", "Bootstrap"],
-    demo: "https://poin-sekolah-production.up.railway.app/",
-    github: "https://github.com/fathirizkiansyah8-lgtm/poin-sekolah",
-    title: {
-      id: "Aplikasi Sistem Poin Sekolah",
-      en: "School Points System App",
-    },
-    desc: {
-      id: "Sistem poin sekolah yang mencatat poin siswa secara otomatis.",
-      en: "A school points system that records student points through a website.",
-    },
-    features: {
-      id: [
-        "Pencatatan poin otomatis berbasis Website",
-        "Dashboard rekap poin",
-        "Ekspor laporan poin",
-      ],
-      en: [
-        "Automatic point recording via website",
-        "Points summary dashboard",
-        "Points report export",
-      ],
-    },
-  },
 ];
 
 const CERTIFICATES = [
-  {
-    image: "assets/images/certificates/magang-pca.png",
-    title: {
-      id: "Surat Keterangan Magang - PT Mitra Semeru Indonesia",
-      en: "Internship Verification Letter - PT Mitra Semeru Indonesia",
-    },
-    issuer: "PT Mitra Semeru Indonesia",
-  },
-  {
-    image: "assets/images/certificates/magang-pca.png",
-    title: {
-      id: "Surat Keterangan Magang - PT Mitra Semeru Indonesia",
-      en: "Internship Verification Letter - PT Mitra Semeru Indonesia",
-    },
-    issuer: "PT Mitra Semeru Indonesia",
-  },
-  {
-    image: "assets/images/certificates/magang-pca.png",
-    title: {
-      id: "Surat Keterangan Magang - PT Mitra Semeru Indonesia",
-      en: "Internship Verification Letter - PT Mitra Semeru Indonesia",
-    },
-    issuer: "PT Mitra Semeru Indonesia",
-  },
   {
     image: "assets/images/certificates/magang-pca.png",
     title: {
