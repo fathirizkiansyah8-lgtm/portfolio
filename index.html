@@ -162,6 +162,15 @@
           </li>
           <li>
             <a
+              href="#education"
+              class="navbar__link"
+              data-section="education"
+              data-i18n="nav.education"
+              >Pendidikan</a
+            >
+          </li>
+          <li>
+            <a
               href="#portfolio"
               class="navbar__link"
               data-section="portfolio"
@@ -319,6 +328,16 @@
                     <use href="#i-download"></use></svg
                   ><span data-i18n="about.cv">Unduh CV</span>
                 </a>
+                <a
+                  class="btn btn--outline"
+                  href="assets/cv/cv-Fathi.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="icon">
+                    <use href="#i-external"></use></svg
+                  ><span data-i18n="about.viewCv">Lihat CV</span>
+                </a>
                 <a class="btn btn--outline" href="#portfolio">
                   <svg class="icon">
                     <use href="#i-code"></use></svg
@@ -400,6 +419,23 @@
         </div>
       </section>
 
+      <!-- ============ PENDIDIKAN ============ -->
+      <section class="section education" id="education">
+        <div class="container">
+          <header class="section-head" data-aos="fade-up">
+            <h2 class="section-title text-gradient" data-i18n="education.title">
+              Pendidikan
+            </h2>
+            <p class="section-sub">
+              <svg class="icon"><use href="#i-sparkles"></use></svg
+              ><span data-i18n="education.subtitle"></span
+              ><svg class="icon"><use href="#i-sparkles"></use></svg>
+            </p>
+          </header>
+          <div class="edu-list" id="educationList"></div>
+        </div>
+      </section>
+
       <!-- ============ PORTFOLIO SHOWCASE ============ -->
       <section class="section portfolio" id="portfolio">
         <div class="container">
@@ -468,12 +504,30 @@
             <div class="filter" role="group" aria-label="Filter project">
               <button
                 class="filter__btn is-active"
-                data-filter="project"
+                data-filter="web-dinamis"
                 aria-pressed="true"
                 type="button"
-                data-i18n="filter.project"
+                data-i18n="filter.web-dinamis"
               >
-                Project
+                Web Dinamis
+              </button>
+              <button
+                class="filter__btn"
+                data-filter="web-statis"
+                aria-pressed="false"
+                type="button"
+                data-i18n="filter.web-statis"
+              >
+                Web Statis
+              </button>
+              <button
+                class="filter__btn"
+                data-filter="mobile"
+                aria-pressed="false"
+                type="button"
+                data-i18n="filter.mobile"
+              >
+                Mobile
               </button>
             </div>
             <div class="project-grid" id="projectGrid"></div>

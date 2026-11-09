@@ -1907,6 +1907,44 @@ textarea.input {
 .detail-media img {
   width: 100%;
 }
+.project-diagrams {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+.project-diagrams__head h2 {
+  font-size: 1.6rem;
+  color: var(--text);
+}
+.project-diagram {
+  min-width: 0;
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--border-strong);
+}
+.project-diagram figcaption h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.project-diagram figcaption p {
+  margin-top: 0.3rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.project-diagram__canvas {
+  margin-top: 1rem;
+  overflow: auto;
+  overscroll-behavior-inline: contain;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #f2f6fb;
+  -webkit-overflow-scrolling: touch;
+}
+.project-diagram__canvas img {
+  display: block;
+  width: 100%;
+  min-width: 760px;
+  height: auto;
+}
 .not-found {
   text-align: center;
   padding: 4rem 1rem;
@@ -2148,4 +2186,73 @@ textarea.input {
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+/* =========================================================
+   PENDIDIKAN
+   ========================================================= */
+.edu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.edu-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--surface, rgba(255,255,255,.04));
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 1rem;
+  transition: transform .2s, border-color .2s;
+}
+.edu-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(96,165,250,.35);
+}
+
+.edu-card__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: .75rem;
+  background: rgba(96,165,250,.12);
+  color: #60a5fa;
+}
+.edu-card__icon .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.edu-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.edu-card__level {
+  font-size: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #60a5fa;
+}
+.edu-card__school {
+  font-size: .95rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+.edu-card__year {
+  font-size: .8rem;
+  color: rgba(255,255,255,.5);
 }

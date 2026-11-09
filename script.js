@@ -35,12 +35,34 @@ const PROFILE = {
   ],
 };
 
-/* category: 'project' | 'design' | 'editing'
+/* Data pendidikan */
+const EDUCATION = [
+  {
+    level: { id: "SD", en: "Elementary School" },
+    school: { id: "SDN Kedoya Selatan 01 Pagi", en: "SDN Kedoya Selatan 01 Pagi" },
+    year: "2015 – 2021",
+    icon: "award",
+  },
+  {
+    level: { id: "SMP", en: "Junior High School" },
+    school: { id: "SMPN 127 Jakarta", en: "SMPN 127 Jakarta" },
+    year: "2021 – 2024",
+    icon: "award",
+  },
+  {
+    level: { id: "SMA / SMK", en: "Senior High School" },
+    school: { id: "SMKN 20 Jakarta – Rekayasa Perangkat Lunak", en: "SMKN 20 Jakarta – Software Engineering" },
+    year: "2024 – 2027",
+    icon: "code",
+  },
+];
+
+/* category: 'web-dinamis' | 'web-statis' | 'mobile'
    demo / github: kosongkan ('') bila tidak ada, tombolnya otomatis disembunyikan */
 const PROJECTS = [
   {
     id: "poin-sekolah",
-    category: "project",
+    category: "web-dinamis",
     image: "assets/images/projects/poin-sekolah.jpeg",
     tech: ["Laravel", "PHP", "MySQL", "Bootstrap"],
     demo: "https://poin-sekolah-production.up.railway.app/",
@@ -63,6 +85,34 @@ const PROJECTS = [
         "Automatic point recording via website",
         "Points summary dashboard",
         "Points report export",
+      ],
+    },
+  },
+  {
+    id: "Web-BMS",
+    category: "web-statis",
+    image: "assets/images/projects/web-bms.jpeg",
+    tech: ["HTML", "CSS", "JavaScript",],
+    demo: "https://bank-melasa-syariah.netlify.app/",
+    github: "https://github.com/fathirizkiansyah8-lgtm/lpss.git",
+    title: {
+      id: "Bank Melasa Syariah",
+      en: "Bank Melasa Syariah",
+    },
+    desc: {
+      id: "Website profil Bank Melasa Syariah yang menampilkan layanan, produk, dan informasi bank secara lengkap.",
+      en: "A profile website for Bank Melasa Syariah showcasing the bank's services, products, and information.",
+    },
+    features: {
+      id: [
+        "Halaman profil dan sejarah bank",
+        "Informasi produk & layanan perbankan syariah",
+        "Tampilan responsif di semua perangkat",
+      ],
+      en: [
+        "Bank profile and history page",
+        "Islamic banking products & services information",
+        "Fully responsive layout across all devices",
       ],
     },
   },
@@ -116,6 +166,7 @@ const I18N = {
     nav: {
       home: "Beranda",
       about: "Tentang",
+      education: "Pendidikan",
       portfolio: "Portofolio",
       contact: "Kontak",
     },
@@ -137,6 +188,7 @@ const I18N = {
       desc: "Saya siswa kelas XII jurusan Rekayasa Perangkat Lunak di SMKN 20 Jakarta. Pada April-Mei 2026, saya menjalani magang sebagai Technology Support Intern di PT Mitra Semeru Indonesia. Saya pernah membuat website bank syariah dan e-commerce menggunakan Laravel, serta mengembangkan aplikasi sistem poin sekolah.",
       quote: "Terus belajar, terus membangun.",
       cv: "Unduh CV",
+      viewCv: "Lihat CV",
       viewProjects: "Lihat Project",
       photoAlt: "Foto Fathi Rizkiansyah",
     },
@@ -156,7 +208,11 @@ const I18N = {
       empty: "Belum ada item di kategori ini.",
     },
     tabs: { projects: "Projects", certs: "Sertifikat", tech: "Tech Stack" },
-    filter: { project: "Project", design: "Desain", editing: "Editing" },
+    filter: { "web-dinamis": "Web Dinamis", "web-statis": "Web Statis", mobile: "Mobile" },
+    education: {
+      title: "Pendidikan",
+      subtitle: "Perjalanan akademis saya",
+    },
     contact: {
       title: "Hubungi Saya",
       subtitle:
@@ -208,6 +264,11 @@ const I18N = {
       github: "GitHub",
       techUsed: "Teknologi yang digunakan",
       featureList: "Fitur utama",
+      diagrams: "Diagram Sistem",
+      flowTitle: "Flowchart Alur Aplikasi",
+      flowDesc: "Alur login dan penggunaan fitur berdasarkan peran pengguna.",
+      erdTitle: "ERD dan Relasi Database",
+      erdDesc: "Struktur tabel dan relasi berdasarkan migration Laravel terbaru.",
       notFoundTitle: "Project tidak ditemukan",
       notFoundDesc: "Tautan project ini tidak valid atau sudah dihapus.",
       backToPortfolio: "Kembali ke portofolio",
@@ -224,6 +285,7 @@ const I18N = {
     nav: {
       home: "Home",
       about: "About",
+      education: "Education",
       portfolio: "Portfolio",
       contact: "Contact",
     },
@@ -245,6 +307,7 @@ const I18N = {
       desc: "I'm a 12th-grade Software Engineering student at SMKN 20 Jakarta. From April to May 2026, I interned as a Technology Support Intern at PT Mitra Semeru Indonesia. I have built a sharia bank website and an e-commerce website with Laravel, and developed a school points system app.",
       quote: "Keep learning, keep building.",
       cv: "Download CV",
+      viewCv: "View CV",
       viewProjects: "View Projects",
       photoAlt: "Fathi Rizkiansyah's photo",
     },
@@ -264,7 +327,11 @@ const I18N = {
       empty: "No items in this category yet.",
     },
     tabs: { projects: "Projects", certs: "Certificates", tech: "Tech Stack" },
-    filter: { project: "Project", design: "Design", editing: "Editing" },
+    filter: { "web-dinamis": "Dynamic Web", "web-statis": "Static Web", mobile: "Mobile" },
+    education: {
+      title: "Education",
+      subtitle: "My academic journey",
+    },
     contact: {
       title: "Contact Me",
       subtitle: "Open to internships, collaborations, and freelance projects.",
@@ -315,6 +382,11 @@ const I18N = {
       github: "GitHub",
       techUsed: "Technologies used",
       featureList: "Key features",
+      diagrams: "System Diagrams",
+      flowTitle: "Application Flowchart",
+      flowDesc: "Login and feature workflows by user role.",
+      erdTitle: "ERD and Database Relationships",
+      erdDesc: "Tables and relationships based on the latest Laravel migrations.",
       notFoundTitle: "Project not found",
       notFoundDesc: "This project link is invalid or has been removed.",
       backToPortfolio: "Back to portfolio",
@@ -729,9 +801,29 @@ function initCounters() {
 }
 
 /* =========================================================
-   10. PORTFOLIO — tab, filter, render kartu
+   10. PENDIDIKAN — render kartu timeline
    ========================================================= */
-let activeFilter = "project";
+function renderEducation() {
+  const list = $("#educationList");
+  if (!list) return;
+  list.innerHTML = EDUCATION.map(
+    (edu, i) => `
+    <article class="edu-card" data-aos="fade-up" data-aos-delay="${i * 100}">
+      <span class="edu-card__icon">${ic(edu.icon)}</span>
+      <div class="edu-card__body">
+        <span class="edu-card__level">${escapeHTML(L(edu.level))}</span>
+        <h3 class="edu-card__school">${escapeHTML(L(edu.school))}</h3>
+        <span class="edu-card__year">${escapeHTML(edu.year)}</span>
+      </div>
+    </article>`,
+  ).join("");
+  refreshAOS();
+}
+
+/* =========================================================
+   11. PORTFOLIO — tab, filter, render kartu
+   ========================================================= */
+let activeFilter = "web-dinamis";
 
 function renderProjects() {
   const grid = $("#projectGrid");
@@ -832,6 +924,15 @@ function initPortfolio() {
       renderProjects();
     });
   });
+
+  // Set filter pertama sebagai aktif secara visual
+  const firstFilterBtn = $(".filter__btn[data-filter='web-dinamis']");
+  if (firstFilterBtn) {
+    $$(".filter__btn").forEach((b) => {
+      b.classList.toggle("is-active", b === firstFilterBtn);
+      b.setAttribute("aria-pressed", String(b === firstFilterBtn));
+    });
+  }
 
   renderProjects();
   renderCertificates();
@@ -1090,7 +1191,7 @@ function renderProjectPage() {
     </nav>
 
     <div class="detail-grid">
-      <div class="detail-info" data-aos="fade-right">
+      <div class="detail-info">
         <h1 class="detail-title">${title}</h1>
         <span class="detail-line" aria-hidden="true"></span>
         <p class="detail-desc">${escapeHTML(L(p.desc))}</p>
@@ -1122,7 +1223,7 @@ function renderProjectPage() {
         </section>
       </div>
 
-      <div class="detail-media" data-aos="fade-left" data-aos-delay="150">
+      <div class="detail-media">
         <img src="${p.image}" alt="${title}" width="1200" height="900">
       </div>
     </div>`;
@@ -1160,6 +1261,7 @@ function start() {
   safe(initParticles);
 
   if (PAGE === "home") {
+    safe(renderEducation);
     safe(initPortfolio);
     safe(initCertModal);
     safe(initContactForm);
