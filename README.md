@@ -1,107 +1,126 @@
 # Portfolio Fathi Rizkiansyah
 
-Website portfolio pribadi yang menampilkan project, sertifikat, dan tech stack saya sebagai siswa Rekayasa Perangkat Lunak di SMKN 20 Jakarta.
+Website portfolio pribadi Fathi Rizkiansyah, siswa Rekayasa Perangkat Lunak di SMKN 20 Jakarta. Website ini menampilkan profil, pendidikan, project, sertifikat, dan teknologi yang dipelajari.
 
 🌐 **Live:** [www.fathirizkiansyah.my.id](https://www.fathirizkiansyah.my.id)
 
----
+## Tentang Saya
 
-## Tentang
-
-Saya Fathi Rizkiansyah, siswa kelas XII jurusan Rekayasa Perangkat Lunak di SMKN 20 Jakarta. Pada April–Mei 2026 saya menjalani magang sebagai Technology Support Intern di PT Mitra Semeru Indonesia. Saya berpengalaman membangun website menggunakan Laravel, PHP, dan MySQL.
-
----
+Saya adalah siswa kelas XII Rekayasa Perangkat Lunak di SMKN 20 Jakarta. Pada April–Mei 2026, saya menjalani magang sebagai Technology Support Intern di PT Mitra Semeru Indonesia. Saya tertarik pada pengembangan web dan aplikasi.
 
 ## Fitur Website
 
-- **Bilingual (ID / EN)** — ganti bahasa Indonesia / English langsung dari navbar
-- **Intro screen** — welcome animation saat pertama kali membuka website (mobile)
-- **Typing animation** — teks peran berganti-ganti di hero section
-- **Particle background** — animasi partikel interaktif di background
-- **Pendidikan** — timeline riwayat pendidikan SD, SMP, SMK
-- **Portfolio tabs** — Projects, Sertifikat, Tech Stack
-- **Filter project** — filter berdasarkan Web Dinamis, Web Statis, Mobile
-- **Detail project** — halaman detail per project dengan deskripsi, teknologi, dan fitur
-- **Modal sertifikat** — preview sertifikat dalam modal
-- **Form kontak** — validasi client-side
-- **Buku tamu / komentar** — form komentar dengan upload foto profil
-- **Unduh & Lihat CV** — tombol download dan preview CV langsung di browser
-- **Responsive** — tampil baik di desktop maupun mobile
-- **Animasi scroll** — menggunakan AOS (Animate On Scroll)
+- Bahasa Indonesia dan English, dengan preferensi bahasa tersimpan di browser
+- Intro screen dan animasi teks peran
+- Background partikel serta animasi saat halaman digulir
+- Bagian profil, pendidikan, portofolio, kontak, dan komentar
+- Portofolio dengan tab Project, Sertifikat, dan Tech Stack
+- Filter project berdasarkan kategori Web Dinamis, Web Statis, dan Mobile
+- Halaman detail project berisi deskripsi, teknologi, dan fitur
+- Preview sertifikat dalam modal
+- Form kontak dengan validasi di browser
+- Form komentar dengan foto opsional; komentar hanya tersimpan selama halaman terbuka
+- Tampilan responsif untuk desktop dan perangkat mobile
 
----
+> Form kontak saat ini belum terhubung ke layanan pengiriman pesan. Komentar juga belum disimpan ke server.
 
-## Project di Portfolio
+## Project
 
 ### Aplikasi Sistem Poin Sekolah
-Sistem pencatatan poin siswa berbasis web yang digunakan di lingkungan sekolah.
 
-- **Tech stack:** Laravel, PHP, MySQL, Bootstrap
-- **Fitur:** pencatatan poin otomatis, dashboard rekap poin, ekspor laporan poin
+Sistem berbasis web untuk mencatat dan merekap poin siswa.
+
+- **Kategori:** Web Dinamis
+- **Teknologi:** Laravel, PHP, MySQL, Bootstrap
+- **Fitur:** pencatatan poin otomatis, dashboard rekap poin, dan ekspor laporan
 - **Demo:** [poin-sekolah-production.up.railway.app](https://poin-sekolah-production.up.railway.app/)
-- **Repo:** [github.com/fathirizkiansyah8-lgtm/poin-sekolah](https://github.com/fathirizkiansyah8-lgtm/poin-sekolah)
+- **Repository:** [poin-sekolah](https://github.com/fathirizkiansyah8-lgtm/poin-sekolah)
 
----
+### Bank Melasa Syariah
 
-## Tech Stack Website Portfolio
+Website profil Bank Melasa Syariah yang menampilkan informasi bank, produk, dan layanan.
 
-| Kategori | Teknologi |
+- **Kategori:** Web Statis
+- **Teknologi:** HTML, CSS, JavaScript
+- **Demo:** [bank-melasa-syariah.netlify.app](https://bank-melasa-syariah.netlify.app/)
+- **Repository:** [lpss](https://github.com/fathirizkiansyah8-lgtm/lpss)
+
+### Aplikasi Eventty
+
+Aplikasi manajemen event OSIS untuk siswa dan admin.
+
+- **Kategori:** Mobile
+- **Teknologi:** Flutter, Dart, Supabase
+- **Fitur:** melihat dan mendaftar event, pengelolaan acara dan peserta, sertifikat digital, kalender, pengumuman, chat, serta notifikasi
+- **Repository:** [web-eventty](https://github.com/fathirizkiansyah8-lgtm/web-eventty)
+
+## Sertifikat
+
+- Surat Keterangan Magang — PT Mitra Semeru Indonesia
+- Penghargaan 5 Besar OSN Tingkat Sekolah Bidang Informatika — SMKN 20 Jakarta
+- Juara I Tim Jakarta Barat, Gala Siswa Indonesia (GSI) SMP Tingkat Kota — Suku Dinas Pendidikan Wilayah II Kota Administrasi Jakarta Barat
+- Juara 1 Liga TopSkor U-14 Divisi 1 Musim 2021/2022 — PT TopSkor Indonesia
+
+## Tech Stack
+
+| Bagian | Teknologi |
 |---|---|
-| Markup | HTML5 |
-| Styling | CSS3 (vanilla, custom properties) |
-| Scripting | JavaScript ES6+ (vanilla, no framework) |
+| Struktur halaman | HTML5 |
+| Tampilan | CSS3 |
+| Interaksi dan data | JavaScript (vanilla) |
 | Animasi | AOS, particles.js |
-| Font | Poppins (Google Fonts) |
-| Icon | Lucide (SVG sprite inline), Devicon |
+| Font | Poppins |
+| Ikon teknologi | Devicon |
+| Ikon antarmuka | SVG sprite |
 
----
+Tech stack yang ditampilkan di website juga mencakup HTML, CSS, JavaScript, Tailwind CSS, Bootstrap, PHP, Laravel, MySQL, Flutter, Dart, Kotlin, Firebase, Android Studio, Git, GitHub, Figma, VS Code, dan Arduino.
 
-## Struktur File
+## Struktur Repository
 
-```
+```text
 portofolioFathi/
-├── index.html          # Halaman utama (beranda, tentang, pendidikan, portfolio, kontak)
-├── project.html        # Halaman detail project
-├── script.js           # Semua logika JS — data, i18n, render, event
-├── style.css           # Semua styling CSS
+├── index.html
+├── project.html
+├── script.js
+├── style.css
+├── README.md
 └── assets/
     ├── cv/
-    │   ├── cv-Fathi.pdf
     │   └── cv-Fathi.jpg
     └── images/
         ├── profile.jpeg
         ├── projects/
-        │   └── poin-sekolah.jpeg
+        │   ├── eventty.jpeg
+        │   ├── poin-sekolah.jpeg
+        │   └── web-bms.jpeg
         └── certificates/
-            └── magang-pca.png
+            ├── gsi-Fathi.jpeg
+            ├── magang-pca.png
+            ├── osn-Fathi.jpeg
+            └── topskor-Fathi.jpeg
 ```
 
----
+Konten project, sertifikat, pendidikan, dan terjemahan dikelola di `script.js`. Halaman utama menggunakan `index.html`; `project.html` menampilkan detail project berdasarkan parameter URL.
 
-## Cara Menjalankan Lokal
+## Menjalankan Secara Lokal
 
-Tidak ada build step — cukup buka dengan live server.
+Website ini tidak memerlukan proses build atau instalasi package.
 
-**VS Code:**
-1. Install ekstensi [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-2. Klik kanan `index.html` → *Open with Live Server*
+1. Clone repository dan buka folder project.
+2. Jalankan `index.html` menggunakan ekstensi seperti [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+3. Buka URL lokal yang disediakan oleh Live Server.
 
-**Atau langsung buka file:**
-```
-open index.html
-```
-
----
+Beberapa font, ikon, dan library animasi dimuat dari CDN, sehingga memerlukan koneksi internet.
 
 ## Kontak
 
 | Platform | Link |
 |---|---|
-| Email | fathirizkiansyah8@gmail.com |
-| GitHub | [github.com/fathirizkiansyah8-lgtm](https://github.com/fathirizkiansyah8-lgtm) |
-| LinkedIn | [linkedin.com/in/fathi-rizkiansyah-701524408](https://www.linkedin.com/in/fathi-rizkiansyah-701524408/) |
+| Email | [fathirizkiansyah8@gmail.com](mailto:fathirizkiansyah8@gmail.com) |
+| GitHub | [fathirizkiansyah8-lgtm](https://github.com/fathirizkiansyah8-lgtm) |
+| LinkedIn | [Fathi Rizkiansyah](https://www.linkedin.com/in/fathi-rizkiansyah-701524408/) |
 | Instagram | [@fathirizkiansyahh](https://www.instagram.com/fathirizkiansyahh/) |
 
 ---
 
-&copy; 2026 Fathi Rizkiansyah. Hak cipta dilindungi.
+© 2026 Fathi Rizkiansyah

@@ -116,6 +116,33 @@ const PROJECTS = [
       ],
     },
   },
+  {
+    id: "Aplikasi Eventty",
+    category: "mobile",
+    image: "assets/images/projects/eventty.jpeg",
+    tech: ["Flutter", "Supabase", "Dart",],
+    github: "https://github.com/fathirizkiansyah8-lgtm/web-eventty",
+    title: {
+      id: "Aplikasi Eventty",
+      en: "Eventty App",
+    },
+    desc: {
+      id: "Aplikasi pencatatan event yang memudahkan pengelolaan acara secara digital.",
+      en: "An event recording application that simplifies digital event management.",
+    },
+    features: {
+      id: [
+        "Jelajahi dan daftar event OSIS secara online",
+        "Kelola event, peserta, dan sertifikat digital",
+        "Akses kalender, pengumuman, chat, dan notifikasi event",
+      ],
+      en: [
+        "Browse and register for student council events online",
+        "Manage events, participants, and digital certificates",
+        "Access event calendars, announcements, chat, and notifications",
+      ],
+    },
+  },
 ];
 
 const CERTIFICATES = [
@@ -126,6 +153,30 @@ const CERTIFICATES = [
       en: "Internship Verification Letter - PT Mitra Semeru Indonesia",
     },
     issuer: "PT Mitra Semeru Indonesia",
+  },
+  {
+    image: "assets/images/certificates/osn-Fathi.jpeg",
+    title: {
+      id: "Penghargaan 5 Besar OSN Tingkat Sekolah Bidang Informatika",
+      en: "Top 5 Award in the School-Level National Science Olympiad (Informatics)",
+    },
+    issuer: "SMKN 20 Jakarta",
+  },
+  {
+    image: "assets/images/certificates/gsi-Fathi.jpeg",
+    title: {
+      id: "Juara I Tim Jakarta Barat - Gala Siswa Indonesia (GSI) SMP Tingkat Kota",
+      en: "First Place, West Jakarta Team - City-Level Junior High School Gala Siswa Indonesia (GSI)",
+    },
+    issuer: "Suku Dinas Pendidikan Wilayah II Kota Administrasi Jakarta Barat",
+  },
+  {
+    image: "assets/images/certificates/topskor-Fathi.jpeg",
+    title: {
+      id: "Juara 1 Liga TopSkor U-14 Divisi 1 Musim 2021/2022",
+      en: "Champion, Liga TopSkor U-14 Division 1, 2021/2022 Season",
+    },
+    issuer: "PT TopSkor Indonesia",
   },
 ];
 
