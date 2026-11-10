@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" class="no-js">
+<html lang="id" class="no-js" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +7,15 @@
   <meta name="description" content="Detail project dari portfolio Fathi Rizkiansyah.">
   <meta name="author" content="Fathi Rizkiansyah">
   <meta name="theme-color" content="#050a14">
+  <script>
+    try {
+      if (localStorage.getItem("portfolio-theme") === "light") {
+        document.documentElement.dataset.theme = "light";
+      }
+    } catch {
+      // Keep the default dark theme when browser storage is unavailable.
+    }
+  </script>
   <meta property="og:type" content="article">
   <meta property="og:title" content="Detail Project | Fathi Rizkiansyah">
   <meta property="og:description" content="Detail project dari portfolio Fathi Rizkiansyah.">
@@ -35,6 +44,10 @@
         <li><a href="index.html#contact" class="navbar__link" data-i18n="nav.contact">Kontak</a></li>
       </ul>
       <div class="navbar__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Aktifkan mode terang" aria-pressed="false" title="Aktifkan mode terang">
+          <svg class="icon theme-toggle__sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+          <svg class="icon theme-toggle__moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+        </button>
         <button class="lang-toggle" id="langToggle" type="button" data-i18n-aria="a11y.lang" aria-label="Ganti bahasa">
           <span data-lang="id">ID</span><span data-lang="en">EN</span>
         </button>

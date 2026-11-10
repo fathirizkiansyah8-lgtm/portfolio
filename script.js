@@ -210,6 +210,8 @@ const I18N = {
     a11y: {
       skip: "Lewati ke konten utama",
       lang: "Ganti bahasa ke English",
+      themeLight: "Aktifkan mode terang",
+      themeDark: "Aktifkan mode gelap",
       close: "Tutup",
       menuOpen: "Buka menu",
       menuClose: "Tutup menu",
@@ -329,6 +331,8 @@ const I18N = {
     a11y: {
       skip: "Skip to main content",
       lang: "Switch language to Bahasa Indonesia",
+      themeLight: "Switch to light mode",
+      themeDark: "Switch to dark mode",
       close: "Close",
       menuOpen: "Open menu",
       menuClose: "Close menu",
@@ -530,6 +534,8 @@ const ICONS = {
   cpu: '<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/>',
   zoom: '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/>',
   check: '<path d="M20 6 9 17l-5-5"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>',
+  moon: '<path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/>',
 };
 
 function injectIconSprite() {
@@ -581,6 +587,7 @@ function applyLanguage() {
   $$(".lang-toggle [data-lang]").forEach((el) =>
     el.classList.toggle("is-active", el.dataset.lang === lang),
   );
+  updateThemeToggleLabel();
   langListeners.forEach((fn) => fn());
 }
 
@@ -589,6 +596,43 @@ function initLanguage() {
     lang = lang === "id" ? "en" : "id";
     store.set("lang", lang);
     applyLanguage();
+  });
+}
+
+function updateThemeToggleLabel() {
+  const button = $("#themeToggle");
+  if (!button) return;
+  const label = t(
+    document.documentElement.dataset.theme === "light"
+      ? "a11y.themeDark"
+      : "a11y.themeLight",
+  );
+  button.setAttribute("aria-label", label);
+  button.setAttribute(
+    "aria-pressed",
+    String(document.documentElement.dataset.theme === "light"),
+  );
+  button.title = label;
+}
+
+function applyTheme(theme, persist = false) {
+  const nextTheme = theme === "light" ? "light" : "dark";
+  document.documentElement.dataset.theme = nextTheme;
+  const themeColor = $('meta[name="theme-color"]');
+  if (themeColor) {
+    themeColor.content = nextTheme === "light" ? "#f4f7fc" : "#050a14";
+  }
+  if (persist) store.set("portfolio-theme", nextTheme);
+  updateThemeToggleLabel();
+}
+
+function initTheme() {
+  applyTheme(store.get("portfolio-theme") === "light" ? "light" : "dark");
+  $("#themeToggle")?.addEventListener("click", () => {
+    applyTheme(
+      document.documentElement.dataset.theme === "light" ? "dark" : "light",
+      true,
+    );
   });
 }
 
@@ -1308,6 +1352,7 @@ function start() {
   });
 
   safe(initLanguage);
+  safe(initTheme);
   safe(initNavbar);
   safe(initParticles);
 
