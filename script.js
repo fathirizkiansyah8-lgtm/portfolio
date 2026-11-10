@@ -13,7 +13,7 @@ const PROFILE = {
   name: "Fathi Rizkiansyah",
   website: "www.fathirizkiansyah.my.id",
   email: "fathirizkiansyah8@gmail.com",
-  cv: "assets/cv/cv-Fathi.pdf",
+  cv: "assets/cv/cv-Fathi.jpg",
   internshipMonths: 2,
   social: [
     {
